@@ -4,10 +4,10 @@ import { ipcRenderer, remote } from 'electron';
 import { Tags } from 'node-id3';
 import React, { ChangeEvent, useState } from 'react';
 import ReactCrop, { Crop } from 'react-image-crop';
-import { Link } from 'react-router-dom';
 
-import routes from '../../constants/routes.json';
 import styles from './Editor.css';
+
+// import { Link } from 'react-router-dom';
 
 const DEFAULT_IMAGE_TYPE = 'data:image/png;base64,';
 
@@ -179,11 +179,6 @@ export default function Editor() {
 
   return (
     <div>
-      <div className={styles.backButton} data-tid="backButton">
-        <Link to={routes.HOME}>
-          <i className="fa fa-arrow-left fa-3x" />
-        </Link>
-      </div>
       <form className={styles.form}>
         <div>
           <button
