@@ -1,7 +1,7 @@
 {
   "name": "id3-editor",
-  "productName": "ElectronReact",
-  "version": "1.2.0",
+  "productName": "id3 editor",
+  "version": "1.0.0-alpha.1",
   "description": "a small app built using electron, react, electron-react-boilerplate, node-id3, react-image-crop, etc.",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
@@ -52,8 +52,8 @@
     ]
   },
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.develar.ElectronReact",
+    "productName": "id3-editor",
+    "appId": "org.st-zelenin.id3-editor",
     "files": [
       "dist/",
       "node_modules/",
@@ -196,6 +196,7 @@
     "cross-env": "^7.0.0",
     "cross-spawn": "^7.0.3",
     "css-loader": "^3.6.0",
+    "cz-conventional-changelog": "3.2.0",
     "detect-port": "^1.3.0",
     "electron": "9.0.4",
     "electron-builder": "^22.7.0",
@@ -267,6 +268,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.12.0",
     "react-hot-loader": "^4.12.21",
+    "react-image-crop": "^8.6.4",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
@@ -311,6 +313,11 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
